@@ -40,10 +40,16 @@
             </div>
             <input type="hidden" required="" class="col-lg-6 col-sm-12 col-xs-12" name="overview_transports"
                    id="overview_transports">
-
-
             {{{ form_render "overview_webAppUrl" data.fields }}}
             {{{ form_render "overview_description" data.fields }}}
+	        {{{ form_render "overview_appid" data.fields }}}
+	        {{{ form_render "overview_urlPublic" data.fields }}}
+	        {{{ form_render "overview_tc" data.fields }}}
+	        {{{ form_render "overview_tenancyId" data.fields }}}
+	        {{{ form_render "overview_supervPeriod" data.fields }}}
+	        {{{ form_render "overview_supervTimeout" data.fields }}}
+	        {{{ form_render "overview_supervExpected" data.fields }}}
+	        {{{ form_render "overview_supervHtmlCode" data.fields }}}
             {{{ form_render "images_thumbnail" data.fields }}}
             {{{ form_render "images_banner" data.fields }}}
 
@@ -88,11 +94,11 @@
                     <label class="control-label col-sm-4">Skip Creating Proxying WebApp: </label>
 
                     <div class="col-sm-8">
-                        <input type="checkbox" class="skip_gateway_checkbox">
+                        <input type="checkbox" checked class="skip_gateway_checkbox">
                     </div>
                 </div>
 
-                <input type="hidden" required="" value="false" class="col-lg-6 col-sm-12 col-xs-12"
+                <input type="hidden" required="" value="true" class="col-lg-6 col-sm-12 col-xs-12"
                        name="overview_skipGateway" id="overview_skipGateway">
 
                 <div class="form-group">
@@ -162,7 +168,7 @@
     </div>
 </div>
 
-<div class="wr-section">
+<div class="wr-section" style="display:none">
     <h2 class="exp_col"><i class="icon-chevron-sign-right icon"></i>Web Application Resources</h2>
     <!--p class="title-helper-txt">A small description about these set of fields.</p-->
     <div id="wr-overview" style="display:none">
@@ -225,7 +231,7 @@
     </div>
 </div>
 
-<div class="wr-section">
+<div class="wr-section" style="display:none">
     <h2 class="exp_col"><i class="icon-chevron-sign-right icon"></i>Advanced Configuration</h2>
     <!--p class="title-helper-txt">A small description about these set of fields.</p-->
     <div id="wr-overview" style="display:none">
@@ -290,7 +296,7 @@
             </div>
         </div>
 
-        <div class="wr-section inner-level">
+        <div class="wr-section inner-level" style="display:none">
             <h2 class="exp_col"><i class="icon-chevron-sign-right icon"></i>OAuth2 Key Manager Configuration</h2>
 
             <div id="wr-overview" style="display:none">
